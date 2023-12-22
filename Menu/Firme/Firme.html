@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Firme</title>
+    <link rel="stylesheet" href="/Menu/css/style.css">
+    <script src="/Menu/js/script.js"></script>
+    <link rel="stylesheet" href="/Menu/css/ruoli.css">
+    <link rel="stylesheet" href="/Menu/css/tables.css">
+</head>
+<body>
+    <div class="overlay" id="aggiungiFirma">
+        <br>
+        <div class="aggiungi" style="height: 33.5vw;">
+            <h1>Inserisci Firma</h1>
+            <div style="margin-left: 0.5vw;margin-right: 0.5vw;">
+                <ul class="navbar">
+                    <li onclick="showLesson('Mattutina')" id="tagMattutina">Mattutina</li>
+                    <li onclick="showLesson('Serale')" id="tagSerale">Serale</li>
+                    <li onclick="showLesson('Recupero')" id="tagRecupero">Recupero</li>
+                    <li>Oxford</li>
+                </ul>
+                <div id="Mattutina" class="lezione">
+                    <form>
+                        <br>
+                        <label>Informazioni Generali</label><br><br>
+                        <input type="time" name="oraGame" class="text">
+                        <select name="oraGame" class="text">
+                            <option>Seleziona Ora Game</option>
+                            <option>8-11</option>
+                            <option>12-16</option>
+                        </select><br><br>
+                        <label>Dettagli Lezione</label><br><br>
+                        <select class="text" name="materia">
+                            <option>Seleziona Materia</option>
+                        </select>
+                        <select class="text" name="tipologia">
+                            <option>Seleziona Tipologia</option>
+                        </select>
+                        <br><br>
+                        <textarea rows="5" name="argomento" style="width: 40%;margin-left: 1vw;">Inserisci Argomento</textarea>
+                        <br><br>
+                        <input type="submit" value="Invia" class="submit">
+                    </form>
+                </div>
+                <div id="Serale" class="lezione">
+                    <form>
+                        <br>
+                        <label>Informazioni Generali</label><br><br>
+                        <input type="time" name="oraGame" class="text">
+                        <select name="oraGame" class="text">
+                            <option>Seleziona Ora Game</option>
+                            <option>8-11</option>
+                            <option>12-16</option>
+                        </select><br><br>
+                        <label>Dettagli Lezione</label><br><br>
+                        <input type="text" name="oraGame" class="text" placeholder="Inserisci Studente">
+                        <select class="text" name="materia">
+                            <option>Seleziona Materia</option>
+                        </select>
+                        <select class="text" name="tipologia">
+                            <option>Seleziona Tipologia</option>
+                        </select>
+                        <br><br>
+                        <textarea rows="5" name="argomento" style="width: 40%;margin-left: 1vw;">Inserisci Argomento</textarea>
+                        <br><br>
+                        <input type="submit" value="Invia" class="submit">
+                    </form>
+                </div>
+                <div id="Recupero" class="lezione">
+                    <form>
+                        <br>
+                        <label>Informazioni Generali</label><br><br>
+                        <input type="time" name="oraGame" class="text">
+                        <select name="oraGame" class="text">
+                            <option>Seleziona Ora Game</option>
+                            <option>8-11</option>
+                            <option>12-16</option>
+                        </select><br><br>
+                        <label>Dettagli Lezione</label><br><br>
+                        <input type="text" name="oraGame" class="text" placeholder="Inserisci Studente">
+                        <select class="text" name="materia">
+                            <option>Seleziona Materia</option>
+                        </select>
+                        <select class="text" name="tipologia">
+                            <option>Seleziona Tipologia</option>
+                        </select>
+                        <select class="text" name="stato">
+                            <option>Seleziona Stato</option>
+                        </select>
+                        <br><br>
+                        <textarea rows="5" name="argomento" style="width: 40%;margin-left: 1vw;">Inserisci Argomento</textarea>
+                        <br><br>
+                        <input type="submit" value="Invia" class="submit">
+                    </form>
+                </div>
+            </div>
+            <br>
+            <button class="chiudi" onclick="closeView('aggiungiFirma')">&times;</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="filter">
+        <div class="aggiungi" style="width:30%;height: 19.5vw;">
+            <h1>Filtra Firme</h1>
+            <select class="text">
+                <option>Filtra per Lezione</option>
+            </select><br><br>
+            <input type="text" class="text" placeholder="Filtra per Docente"><br><br>
+            <input type="text" class="text" placeholder="Fltra per Studente"><br><br>
+            <button class="submit">Applica</button><br><br>
+            <button class="chiudi" onclick="closeView('filter')">&times;</button>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="header">
+            <div style="width: 50%;height: 80%;">
+                <button class="indietro" onclick="indietro()">&#8656</button>
+            </div>
+            <h1>Firme</h1>
+            <div style="width: 50%;height: 80%;" onclick="openNav()">
+                <img src = "https://minotar.net/helm/Michael_02/100" class="imgDip">
+            </div>
+        </div>
+        <br>
+        <div class="strumenti">
+            <div>
+                <img src="/Images/icons/add.png" class="strumento" onclick="openView('aggiungiFirma')" style="float: left;">
+            </div>
+            <h2>Storico Firme</h2>
+            <div>
+                <img src="/Images/icons/filter.png" class="filter" style="float: right;" onclick="openView('filter')">
+            </div>
+        </div>
+        <br>
+        <div class="boxGrid">
+            <div class="box">
+                <h2 style="background-color: red;">Mattutina</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Materia:</b> Matematica - Scritto
+                    <br><br>
+                </div>
+                <div>
+                    
+                    <textarea readonly rows="5">Il romanticismo</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>Mattutina</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Materia:</b> Matematica - Scritto
+                    <br><br>
+                </div>
+                <div>
+                    
+                    <textarea readonly rows="5">Il romanticismo</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>Serale</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Materia:</b> Matematica - Scritto
+                    <br><br>
+                </div>
+                <div>
+                    <textarea readonly rows="5">TikeToke - Il romanticismo</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2 style="background-color: green;">Recupero</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Materia:</b> Matematica - Scritto
+                    <br><br>
+                </div>
+                <div>
+                    
+                    <textarea readonly rows="5">TikeToke - Il romanticismo</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2 style="background-color: red;">Recupero</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Materia:</b> Matematica - Scritto
+                    <br><br>
+                </div>
+                <div>
+                    
+                    <textarea readonly rows="5">TikeToke - Il romanticismo</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>Oxford</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Studente:</b> TikeToke
+                    <br><br>
+                </div>
+                <div>
+                    <textarea readonly rows="5">Livello A2 - 80/100</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>BMPS</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Studente:</b> TikeToke
+                    <br><br>
+                </div>
+                <div>
+                    <textarea readonly rows="5">Lezione 2 - TikeTokes</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>BMPS</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Studente:</b> TikeToke
+                    <br><br>
+                </div>
+                <div>
+                    <textarea readonly rows="5">Esame - 80/100 - TikeTokes</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+            <div class="box">
+                <h2>Club</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Docente:</b> Michael_02
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Club:</b> Giornalismo
+                    <br><br>
+                </div>
+                <div>
+                    <textarea readonly rows="5">TikeToke - TokeTike - TikesTokes</textarea>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidenav" id="sidenav">
+        <a onclick="closeNav()" class="close">&times;</a><br><br><br>
+
+        <h1>Michael_02</h1>
+        <h2 class="presidenza">Presidenza</h2>
+        <h3>Extra</h3>
+        <ul>
+            <li>Gestore Dormitori</li>
+            <li>Gestore Club</li>
+            <li>Gestore Corsi</li>
+        </ul>
+        <br>
+        <div class="optionGrid"">
+            <button class="option">Statistiche</button>
+            <button class="option">Circolari</button>
+            <button class="option">Altro</button>
+            <button class="esci">Esci <img class="icon" src="/Images/icons/logout.png"></button>
+        </div>
+    </div>
+
+</body>
+</html>

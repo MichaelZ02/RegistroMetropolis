@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Login</title>
+    <link rel="stylesheet" href="/Menu/css/style.css">
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+    <form class="loginForm" action="/login.php" method="post">
+        <img src="/Images/loghi/logoScuola.png" class="account">
+        <br>
+        <input type="text" placeholder="Inserisci Nome" class="loginText" name="username"><br><br>
+        <div style="display: inline-flex;">
+            <input type="password" placeholder="Inserisci Password" class="loginPsw"  name="password">
+            <button type="button" class="showPsw">X</button>
+        </div>
+        <br><br>
+        <input type="submit" value="Accedi" class="loginButton">
+    </form>
+</body>
+</html>

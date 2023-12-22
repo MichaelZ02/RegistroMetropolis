@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Iscrizioni</title>
+    <link rel="stylesheet" href="/Menu/css/style.css">
+    <script src="/Menu/js/script.js"></script>
+    <link rel="stylesheet" href="/Menu/css/ruoli.css">
+    <link rel="stylesheet" href="/Menu/css/tables.css">
+</head>
+<body>
+
+    <div class="overlay" id="aggiungiIscrizione">
+        <br>
+        <div class="aggiungi" style="width: 30%;height: 13.5vw;">
+            <h1>Iscrivi Studente</h1>
+            <form class="form">
+                <input type="text" class="text" name="studente" placeholder="Inserisci Studente">
+                <br><br>
+                <input type="submit" value="Invia" class="submit">
+            </form>
+            <button class="chiudi" onclick="closeView('aggiungiIscrizione')">&times;</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="filter">
+        <div class="aggiungi" style="width:30%;height: 16.5vw;">
+            <h1>Filtra Firme</h1>
+            <input type="text" class="text" placeholder="Filtra per Bidello"><br><br>
+            <input type="text" class="text" placeholder="Fltra per Studente"><br><br>
+            <button class="submit">Applica</button><br><br>
+            <button class="chiudi" onclick="closeView('filter')">&times;</button>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="header">
+            <div style="width: 50%;height: 80%;">
+                <button class="indietro" onclick="indietro()">&#8656</button>
+            </div>
+            <h1>Iscrizioni</h1>
+            <div style="width: 50%;height: 80%;" onclick="openNav()">
+                <img src = "https://minotar.net/helm/Michael_02/100" class="imgDip">
+            </div>
+        </div>
+        <br>
+        <div class="strumenti">
+            <div>
+                <img src="/Images/icons/add.png" class="strumento" onclick="openView('aggiungiIscrizione')" style="float: left;">
+            </div>
+            <h2>Storico Iscrizioni</h2>
+            <div>
+                <img src="/Images/icons/filter.png" class="filter" style="float: right;" onclick="openView('filter')">
+            </div>
+        </div>
+        <br>
+        <div class="boxGrid">
+            <div class="box">
+                <h2>Michael_02</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Telegram:</b> @IldebrandoDiSoana
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Bidello:</b> Michael_02
+                    <br><br>
+                </div>
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+    
+            <div class="box">
+                <h2>Michael_02</h2>
+                <div style="width: 25%;float: left;">
+                    <img src = "https://minotar.net/helm/Michael_02/100" class="imgBox">
+                </div>
+                <div class="info">
+                    &#128311; <b>Telegram:</b> @IldebrandoDiSoana
+                    <br>
+                    &#128311; <b>Data:</b> 17/12/2023 - 21:12
+                    <br>
+                    &#128311; <b>Bidello:</b> Michael_02
+                    <br><br>
+                </div>
+                
+                <div class="actions">
+                    <img class="action" src="/Images/icons/edit.png">
+                    <img class="action" src="/Images/icons/delete.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidenav" id="sidenav">
+        <a onclick="closeNav()" class="close">&times;</a><br><br><br>
+
+        <h1>Michael_02</h1>
+        <h2 class="presidenza">Presidenza</h2>
+        <h3>Extra</h3>
+        <ul>
+            <li>Gestore Dormitori</li>
+            <li>Gestore Club</li>
+            <li>Gestore Corsi</li>
+        </ul>
+        <br>
+        <div class="optionGrid"">
+            <button class="option">Statistiche</button>
+            <button class="option">Circolari</button>
+            <button class="option">Altro</button>
+            <button class="esci">Esci <img class="icon" src="/Images/icons/logout.png"></button>
+        </div>
+    </div>
+   
+</body>
+</html>

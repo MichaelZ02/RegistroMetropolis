@@ -1,0 +1,77 @@
+.loginForm{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    background-color: #9AD0C2;
+    width: 50%;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 2vw;
+    border: 1px solid black;
+    margin-top: 10vw;
+}
+
+.error{
+    display: none;
+    margin: auto;
+    background-color: #265073;
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    width: 25%;
+    height: 10vw;
+    border: 1px solid black;
+    border-radius: 2vw;
+}
+
+.loginPsw{
+    width: 40vw;
+    background-color: #265073;
+    color: white;
+    font-size: 3vw;
+    border: 1px solid black;
+    border-bottom-left-radius: 2vw;
+    border-top-left-radius: 2vw;
+}
+
+.showPsw{
+    width: 4vw; 
+    background-color: #51f567;
+    border: 1px solid black;
+    border-bottom-right-radius: 2vw;
+    border-top-right-radius: 2vw;
+    cursor: pointer;
+}
+
+.loginText{
+
+    width: 44vw;
+    background-color: #265073;
+    color: white;
+    font-size: 3vw;
+    border: 1px solid black;
+    border-radius: 2vw;
+}
+
+.loginButton{
+    width: 20vw;
+    height: 4vw;
+    font-size: 3vw;
+    justify-self: center;
+    background-color: #51f567;
+    border-radius: 2vw;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.account{
+    width: 8vw;
+    height: 8vw;
+    justify-self: center;
+}
+
+.imgScuola{
+    width: 12vw;
+    height: 12vw;
+    margin: auto;
+}

@@ -1,0 +1,94 @@
+.presidenza{
+    background-color: #00892c;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.rettorato{
+    color: #026b1c;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+
+/*Da cambiare in DIREZIONE ATA*/
+.direzione.ata{
+    color: #02e83c;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+
+/*Da cambiare in RESP DOCENTI*/
+.resp.docenti{
+    color: #0099b8;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.coordinatore{
+    color: #029499;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.insegnante{
+    color: #02a3a8;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.supplente{
+    color: #02e8f0;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.gestore.dormitori{
+    color: #02c8cf;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.bidello{
+    color: #02c3c9;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
+.docente.forest{
+    color: #178232;
+    color: white;
+    border-radius: 2vw;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    font-size: 2vw;
+}
